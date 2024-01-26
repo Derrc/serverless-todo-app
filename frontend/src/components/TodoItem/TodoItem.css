@@ -1,0 +1,14 @@
+.todo-item {
+  display: flex;
+}
+
+.todo-item-content {
+  width: 500px;
+}
+
+.todo-item-content-done {
+  text-decoration: line-through;
+}
+
+.todo-item-remove-button {
+}
