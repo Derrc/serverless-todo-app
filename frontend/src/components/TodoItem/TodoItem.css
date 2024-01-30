@@ -11,4 +11,6 @@
 }
 
 .todo-item-remove-button {
+  font-weight: bold;
+  color: red;
 }

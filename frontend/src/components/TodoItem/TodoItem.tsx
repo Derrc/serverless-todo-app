@@ -5,14 +5,14 @@ type Props = {
   content: string;
   isDone: boolean;
 };
-export const TodoItem = ({ id, content, isDone }: Props) => {
-  const handleClick = () => {
-    // call update endpoint here (update todo isDone)
-  };
+export const TodoItem = ({ content, isDone }: Props) => {
+  // const handleClick = () => {
+  //   // call update endpoint here (update todo isDone)
+  // };
 
-  const handleRemoveTodo = () => {
-    // call delete endpoint here
-  };
+  // const handleRemoveTodo = () => {
+  //   // call delete endpoint here
+  // };
   return (
     <div className="todo-item">
       <li
@@ -22,7 +22,7 @@ export const TodoItem = ({ id, content, isDone }: Props) => {
       >
         {content}
       </li>
-      <button className="todo-item-remove-button"> Remove </button>
+      <button className="todo-item-remove-button"> X </button>
     </div>
   );
 };

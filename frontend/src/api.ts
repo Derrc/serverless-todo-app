@@ -4,6 +4,6 @@ export const getTodos = () => {
   return mockTodos;
 };
 
-export const addTodo = (content: string) => {
-  // post call
-};
+// export const addTodo = (content: string) => {
+//   // post call
+// };

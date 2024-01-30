@@ -1,10 +1,7 @@
 import { useState } from "react";
 import "./TodoModal.css";
 
-type Props = {
-  onSubmit: () => void;
-};
-export const TodoModal = ({ onSubmit }: Props) => {
+export const TodoModal = () => {
   const [content, setContent] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,21 +12,29 @@ export const TodoModal = ({ onSubmit }: Props) => {
     e.preventDefault();
 
     console.log(content);
-    onSubmit();
+
+    // close modal
+    const dialog = document.querySelector("dialog");
+    dialog?.close();
 
     // post methods to add todo to db
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="content"> Content </label>
-      <input
-        id="content"
-        type="text"
-        name="content"
-        value={content}
-        onChange={handleChange}
-      />
-      <button type="submit"> Add Todo </button>
-    </form>
+    <dialog id="todo-modal" className="todo-modal">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="content"> Content: </label>
+        <input
+          id="content"
+          type="text"
+          name="content"
+          value={content}
+          onChange={handleChange}
+          autoFocus
+        />
+        <button className="todo-modal-button" type="submit">
+          Add Todo
+        </button>
+      </form>
+    </dialog>
   );
 };
