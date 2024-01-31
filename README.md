@@ -4,8 +4,8 @@ Simple serverless todo app hosted using AWS S3, Lambda, and API Gateway. Fronten
 
 [website](https://serverless-todo-app-1220.s3.amazonaws.com/index.html)
 
-S3: host static website
+**S3**: host static website
 
-Lambda: lambda functions for CRUD operations (getting/adding/updating/deleting todos)
+**Lambda**: lambda functions for CRUD operations (getting/adding/updating/deleting todos)
 
-API Gateway: hosts endpoints that act as a proxy and call respective lambda function
+**API Gateway**: hosts endpoints that act as a proxy and call respective lambda function
