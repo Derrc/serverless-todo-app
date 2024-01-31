@@ -3,7 +3,6 @@ import {
   GetTodosResponse,
   PostTodosRequestPayload,
   TodosResponse,
-  DeleteTodosPayload,
   Todo,
 } from "./types";
 
