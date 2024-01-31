@@ -1,14 +1,11 @@
-import "./App.css";
-import { getTodos } from "./api";
 import { TodoItemList } from "./components/TodoItemList";
+import "./App.css";
 
 function App() {
-  const todos = getTodos();
-
   return (
     <div className="container">
       <div className="title"> Todo List </div>
-      <TodoItemList todos={todos} />
+      <TodoItemList />
     </div>
   );
 }

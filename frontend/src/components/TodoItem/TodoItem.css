@@ -1,9 +1,12 @@
 .todo-item {
   display: flex;
+  margin-bottom: 0.5rem;
 }
 
 .todo-item-content {
   width: 500px;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .todo-item-content-done {
@@ -11,6 +14,7 @@
 }
 
 .todo-item-remove-button {
+  font-size: 1rem;
   font-weight: bold;
   color: red;
 }

@@ -1,28 +1,35 @@
+import { deleteTodo, updateTodo } from "../../api";
+import { Todo } from "../../types";
 import "./TodoItem.css";
 
 type Props = {
-  id: number;
-  content: string;
-  isDone: boolean;
+  todo: Todo;
+  onClick: () => void;
 };
-export const TodoItem = ({ content, isDone }: Props) => {
-  // const handleClick = () => {
-  //   // call update endpoint here (update todo isDone)
-  // };
+export const TodoItem = ({ todo, onClick }: Props) => {
+  const handleUpdate = async () => {
+    await updateTodo(todo);
+    onClick();
+  };
 
-  // const handleRemoveTodo = () => {
-  //   // call delete endpoint here
-  // };
+  const handleDelete = async () => {
+    await deleteTodo(todo.id);
+    onClick();
+  };
+
   return (
     <div className="todo-item">
       <li
         className={`todo-item-content ${
-          isDone ? "todo-item-content-done" : ""
+          todo.isDone ? "todo-item-content-done" : ""
         }`}
+        onClick={handleUpdate}
       >
-        {content}
+        {todo.content}
       </li>
-      <button className="todo-item-remove-button"> X </button>
+      <button className="todo-item-remove-button" onClick={handleDelete}>
+        X
+      </button>
     </div>
   );
 };
