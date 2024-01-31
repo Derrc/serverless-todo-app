@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useReducer } from "react";
 import type { Todo } from "../../types";
 import { TodoItem } from "../TodoItem";
 import { TodoModal } from "../TodoModal";
-import { getTodos, updateTodo } from "../../api";
+import { getTodos } from "../../api";
 import "./TodoItemList.css";
 
 export const TodoItemList = () => {
